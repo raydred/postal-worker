@@ -1,0 +1,20 @@
+{
+  "name": "postal-worker",
+  "version": "1.0.0",
+  "description": "Postal Worker is an API Client, similar to a very basic postman.",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.1",
+    "pretty-bytes": "^5.6.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.5.9"
+  }
+}
