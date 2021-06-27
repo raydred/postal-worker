@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" type="module" defer></script>
+    <script src="assets/script.js" type="module" defer></script>
     <title>Postal-Worker</title>
     <link rel="shortcut icon" type="image/jpg" href="assets/favicon.png"/>
     
@@ -46,11 +46,11 @@
 
                 <div class="tab-pane fade slow active show" id="query-params" role="tabpanel" aria-labelledby="query-params-tab">
                     <div data-query-params></div>
-                    <button data-add-query-params-btn class="mt-2 btn btn-outline-success">Add</button>
+                    <button data-add-query-param-btn class="mt-2 btn btn-outline-success">Add</button>
                 </div>
                 <div class="tab-pane fade slow" id="request-headers" role="tabpanel" aria-labelledby="request-headers-tab">
                     <div data-request-headers></div>
-                    <button data-add-request-headers-btn class="mt-2 btn btn-outline-success">Add</button>
+                    <button data-add-request-header-btn class="mt-2 btn btn-outline-success">Add</button>
                 </div>
                 <div class="tab-pane fade slow" id="json" role="tabpanel" aria-labelledby="json-tab">
                     <div data-json-request-body class="overflow:auto;" style="max-height: 200px;"></div>
@@ -90,7 +90,7 @@
             <div class="tab-content p-3 border-top-0 border">
 
                 <div class="tab-pane fade slow active show" id="body" role="tabpanel" aria-labelledby="body-tab">
-                    <div data-json-request-body class="overflow:auto;" style="max-height: 200px;"></div>
+                    <div data-json-response-body class="overflow:auto;" style="max-height: 200px;"></div>
                 </div>
                 <div class="tab-pane fade slow" id="response-headers" role="tabpanel" aria-labelledby="response-headers-tab">
                     <div data-response-headers style="display: grid;grid-template-columns: auto 1fr; gap:0.5rem 2rem;"></div>
