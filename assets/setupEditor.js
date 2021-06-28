@@ -44,6 +44,6 @@ export default function setupEditors(){
         });
     }
 
-    return { responseEditor, updateResponseEditor };
+    return { requestEditor, updateResponseEditor };
 
 }

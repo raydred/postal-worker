@@ -11,7 +11,6 @@ const requestHeadersContainer = document.querySelector('[data-request-headers]')
 const keyValueTemplate = document.querySelector("[data-key-value-template]");
 const responseHeadersContainer = document.querySelector("[data-response-headers]");
 
-
 queryParamsContainer.append(createKeyValuePair());
 requestHeadersContainer.append(createKeyValuePair());
 
@@ -35,22 +34,29 @@ axios.interceptors.response.use(updateEndTime, e => {
     return Promise.reject(updateEndTime(e.response));
 });
 
+
 const { requestEditor, updateResponseEditor } = setupEditors();
 
 form.addEventListener('submit',e => {
     e.preventDefault();
+
+    let data;
+    try{
+        data = JSON.parse(requestEditor.state.doc.toString() || null)
+    } catch(e){
+        alert("JSON data is malformed.");
+        return;
+    }
 
     axios({
         url: document.querySelector('[data-url]').value,
         method:document.querySelector('[data-method]').value,
         params: keyValuePairsToObjects(queryParamsContainer),
         headers: keyValuePairsToObjects(requestHeadersContainer),
+        data,
     })
     .catch(e => e)
     .then(response => {
-
-        console.log("requestEditor:", requestEditor);
-        console.log("updateResponseEditor:", updateResponseEditor);
 
         document.querySelector("[data-response-section]").classList.remove("d-none");
 

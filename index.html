@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/jpg" href="assets/favicon.png"/>
     
 </head>
-<body>
+<body class="fade in slow" style="display: none;">
     <div class="p-4">
         <form data-form>
             <div class="input-group mb-4">
@@ -20,7 +20,7 @@
                     <option value="PATCH">PATCH</option>
                     <option value="DELETE">DELETE</option>
                 </select>
-                <input data-url required class="form-control" type="url" value="https://jsonplaceholder.typicode.com/todos/1" placeholder="https://example.com" />
+                <input data-url required class="form-control" type="url" value="" placeholder="https://example.com" />
                 <button type="submit" class="btn btn-primary">Send</button>
             </div>
 
@@ -108,6 +108,19 @@
             <button type="button" data-remove-btn class="btn btn-outline-danger">Remove</button>
         </div>
     </template>
+
+<script type="text/javascript" defer>
+
+    window.addEventListener('DOMContentLoaded', (e) => {
+        let body = document.querySelector("body[style]");
+        body.attributes["style"].textContent = "";
+        body.className = "show";     
+    });
+    
+    
+
+    
+</script>
 
 </body>
 </html>
